@@ -11,9 +11,8 @@ export default class Thumbnail extends Component {
   }
 
   componentDidMount() {
-    console.log(this.state, this.props.author);
     let urlName = this.props.author.split(" ").join("%20");
-    console.log(urlName);
+    console.log(this.state, this.props.author, urlName);
     axios
       .get(
         `https://www.mediawiki.org/w/api.php?action=query&prop=pageimages&titles=${urlName}&format=json&pithumbsize=300`
