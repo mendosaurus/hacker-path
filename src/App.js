@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import Quotes from "./components/Quotes";
 import News from "./components/News";
 import StudyGroup from "./components/StudyGroup";
+
 import { Switch, Route } from "react-router-dom";
 
 function App() {
