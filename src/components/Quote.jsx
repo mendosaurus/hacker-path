@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Rating from "./Rating";
 
 export default class Quote extends Component {
   render() {
@@ -9,7 +10,7 @@ export default class Quote extends Component {
           <footer className="blockquote-footer">
             {this.props.quote.author}
           </footer>
-          {this.props.quote.rating}
+          <Rating>{this.props.quote.rating}</Rating>
           <span>voted by {this.props.quote.numberOfVotes} people</span>
         </blockquote>
       </div>
