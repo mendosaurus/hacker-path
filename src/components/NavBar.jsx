@@ -37,7 +37,7 @@ export default class NavBar extends Component {
             </li>
             <li className="nav-item">
               <Link to={"/quotes"} className="nav-link">
-                Daily Quote
+                Programmer's Quote
               </Link>
             </li>
             <li className="nav-item">
@@ -45,11 +45,11 @@ export default class NavBar extends Component {
                 Latest Hacker News
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link to={"/study-group"} className="nav-link">
                 Make Study Group
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </nav>
