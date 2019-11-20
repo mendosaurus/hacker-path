@@ -12,10 +12,13 @@ export default class Thumbnail extends Component {
 
   componentDidMount() {
     console.log(this.state, this.props.author);
+    let urlName = this.props.author.split(" ").join("%20");
+    console.log(urlName);
     axios
       .get(
-        `https://en.wikipedia.org/w/api.php?action=query&titles=${this.props.author}&prop=pageimages&format=json&pithumbsize=300`
+        `https://www.mediawiki.org/w/api.php?action=query&prop=pageimages&titles=${urlName}&format=json&pithumbsize=300`
       )
+      // https://www.mediawiki.org/w/api.php?action=query&prop=pageimages&titles=Albert%20Einstein&pithumbsize=100
       .then(response => {
         this.setState({ authors: response.data });
       });
