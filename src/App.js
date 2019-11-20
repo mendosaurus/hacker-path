@@ -8,16 +8,6 @@ import News from "./components/News";
 import StudyGroup from "./components/StudyGroup";
 import { Switch, Route } from "react-router-dom";
 
-// import cheerio from "cheerio";
-// axios.get(`https://news.ycombinator.com/news`).then((err, resp, html) => {
-//   if (!err) {
-//     const $ = cheerio.load(html);
-//     console.log("hi");
-
-//     console.log($(".athing").text());
-//   }
-// });
-
 function App() {
   return (
     <div className="App">
