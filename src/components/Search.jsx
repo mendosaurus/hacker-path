@@ -15,9 +15,9 @@ export default class Search extends Component {
                 onChange={this.props.searchInput}
               />
             </div>
-            <div className="control">
+            {/* <div className="control">
               <a className="button is-info">Search</a>
-            </div>
+            </div> */}
           </div>
         </div>
       </form>
