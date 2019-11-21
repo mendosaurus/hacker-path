@@ -41,15 +41,15 @@ export default class NavBar extends Component {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to={"/news"} className="nav-link">
-                Latest Hacker News
+              <Link to={"/daily-quote"} className="nav-link">
+                Daily Quote
               </Link>
             </li>
-            {/* <li className="nav-item">
+            <li className="nav-item">
               <Link to={"/study-group"} className="nav-link">
                 Make Study Group
               </Link>
-            </li> */}
+            </li>
           </ul>
         </div>
       </nav>
