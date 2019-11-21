@@ -13,7 +13,7 @@ export default class Thumbnail extends Component {
     let urlName = this.props.author.split(" ").join("%20");
     console.log(
       urlName,
-      `https://en.wikipedia.org/w/api.php?action=query&titles=${urlName}&prop=pageimagesformat=json`
+      `https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=query&titles=${urlName}&prop=pageimagesformat=json`
     );
     if (this.props.author)
       axios
@@ -21,7 +21,7 @@ export default class Thumbnail extends Component {
         //   "https://en.wikipedia.org/w/api.php?action=query&titles=George%20Boole&prop=pageimages&format=json&pithumbsize=100"
         // )
         .get(
-          `https://en.wikipedia.org/w/api.php?action=query&titles=${urlName}&format=json&prop=pageimages&pithumbsize=500`
+          `https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=query&titles=${urlName}&format=json&prop=pageimages&pithumbsize=500`
         )
         .then(response => {
           console.log(

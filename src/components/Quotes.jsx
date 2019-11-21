@@ -13,7 +13,9 @@ export default class Quotes extends Component {
 
   componentDidMount() {
     axios
-      .get("https://programming-quotes-api.herokuapp.com/quotes")
+      .get(
+        "https://cors-anywhere.herokuapp.com/https://programming-quotes-api.herokuapp.com/quotes"
+      )
       .then(response => {
         this.setState({ quotes: response.data });
       });
