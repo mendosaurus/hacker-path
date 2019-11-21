@@ -16,6 +16,7 @@ export default class Quotes extends Component {
       .get("https://programming-quotes-api.herokuapp.com/quotes")
       .then(response => {
         this.setState({ quotes: response.data });
+        console.log(response.data);
       });
   }
 

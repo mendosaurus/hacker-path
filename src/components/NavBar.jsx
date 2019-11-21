@@ -5,7 +5,7 @@ import "../App.css";
 export default class NavBar extends Component {
   render() {
     return (
-      <nav className="navbar navbar-expand-lg bg-dark">
+      <nav className="navbar navbar-expand-lg">
         <a className="navbar-brand font-orange" href="/">
           <img
             src="../images/logo.png"
@@ -30,28 +30,28 @@ export default class NavBar extends Component {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             {/* <li className="nav-item">
-              <Link to={"/"} className="nav-link">
+              <Link to={"/"} className="nav-link text-light">
                 Home
                 <span className="sr-only">(current)</span>
               </Link>
             </li> */}
-            <li className="nav-item text-muted">
-              <Link to={"/quotes"} className="nav-link">
+            <li className="nav-item">
+              <Link to={"/quotes"} className="nav-link text-light">
                 Search Quotes
               </Link>
             </li>
             {/* <li className="nav-item">
-              <Link to={"/daily-quote"} className="nav-link">
+              <Link to={"/daily-quote"} className="nav-link text-light">
                 Daily Quote
               </Link>
             </li> */}
             {/* <li className="nav-item">
-              <Link to={"/make-study-group"} className="nav-link">
+              <Link to={"/make-study-group"} className="nav-link text-light">
                 Make Study Group
               </Link>
             </li> */}
             <li className="nav-item">
-              <Link to={"/saved-quotes"} className="nav-link">
+              <Link to={"/saved-quotes"} className="nav-link text-light">
                 Saved Quotes
               </Link>
             </li>

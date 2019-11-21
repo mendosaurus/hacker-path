@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Thumbnail from "./Thumbnail";
-import Rating from "./Rating";
 import RandomQuote from "./RandomQuote";
 
 export default class Home extends Component {
@@ -16,15 +14,13 @@ export default class Home extends Component {
     axios
       .get("https://programming-quotes-api.herokuapp.com/quotes/random")
       .then(response => {
+        console.log(response.data);
         this.setState({ randomQuote: response.data });
       });
+    console.log(this.state);
   }
 
   render() {
-    return (
-      <div>
-        <RandomQuote quote={this.state.randomQuote} />
-      </div>
-    );
+    return <RandomQuote quote={this.state.randomQuote} />;
   }
 }

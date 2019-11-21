@@ -10,14 +10,14 @@ export default class Thumbnail extends Component {
   constructor() {
     super();
     this.state = {
-      authors: {}
+      authors: {},
       // authorString = ''
     };
   }
 
   componentDidMount() {
     let urlName = this.props.author.split(" ").join("%20");
-    console.log(urlName);
+    // console.log(urlName);
     // console.log(
     //   urlName,
     //   `https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=query&titles=${urlName}&prop=pageimagesformat=json`
@@ -39,9 +39,9 @@ export default class Thumbnail extends Component {
         });
   }
 
-  // makeUrl = () => {
-  //   authorString
-  // }
+    // makeUrl = () => {
+    //   authorString
+    // }
   //.query.pages.'175040'
   render() {
     // {
