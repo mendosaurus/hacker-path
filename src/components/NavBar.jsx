@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-
 export default class NavBar extends Component {
   render() {
     return (
@@ -14,7 +13,7 @@ export default class NavBar extends Component {
             className="d-inline-block align-top"
             alt=""
           />
-          Hacker's Path
+          5 seconds of knowledge
         </a>
         <button
           className="navbar-toggler"
