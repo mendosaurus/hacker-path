@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import "../App.css";
 
 export default class NavBar extends Component {
   render() {
     return (
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a className="navbar-brand" href="/">
+      <nav className="navbar navbar-expand-lg bg-dark">
+        <a className="navbar-brand font-orange" href="/">
           <img
             src="../images/logo.png"
             width="30"
@@ -13,7 +14,7 @@ export default class NavBar extends Component {
             className="d-inline-block align-top"
             alt=""
           />
-          5 seconds of knowledge
+          <strong>5 SECONDS OF KNOWLEDGE</strong>
         </a>
         <button
           className="navbar-toggler"
@@ -34,9 +35,9 @@ export default class NavBar extends Component {
                 <span className="sr-only">(current)</span>
               </Link>
             </li> */}
-            <li className="nav-item">
+            <li className="nav-item text-muted">
               <Link to={"/quotes"} className="nav-link">
-                Search Quote
+                Search Quotes
               </Link>
             </li>
             {/* <li className="nav-item">

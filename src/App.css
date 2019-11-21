@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  font-family: "Roboto Mono", monospace, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 .App-logo {
@@ -19,4 +22,8 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+.font-orange {
+  color: #fea04f;
 }
