@@ -1,22 +1,19 @@
 import React, { Component } from "react";
 import axios from "axios";
-axios
-  .get(
-    "https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=query&titles=Edsger%20W.%20Dijkstra|Elon%20Musk&format=json&prop=pageimages&pithumbsize=500"
-  )
+// axios
+//   .get(
+//     "https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=query&titles=Edsger%20W.%20Dijkstra|Elon%20Musk&format=json&prop=pageimages&pithumbsize=500"
+//   )
 
-  .then(result => console.log(result));
+//   .then(result => console.log(result));
 export default class Thumbnail extends Component {
   constructor() {
     super();
     this.state = {
-      authors: {},
+      authors: {}
       // authorString = ''
     };
   }
-
-
-
 
   componentDidMount() {
     let urlName = this.props.author.split(" ").join("%20");
@@ -42,9 +39,9 @@ export default class Thumbnail extends Component {
         });
   }
 
-    // makeUrl = () => {
-    //   authorString
-    // }
+  // makeUrl = () => {
+  //   authorString
+  // }
   //.query.pages.'175040'
   render() {
     // {
