@@ -13,9 +13,7 @@ export default class Quotes extends Component {
 
   componentDidMount() {
     axios
-      .get(
-        "https://programming-quotes-api.herokuapp.com/quotes"
-      )
+      .get("https://programming-quotes-api.herokuapp.com/quotes")
       .then(response => {
         this.setState({ quotes: response.data });
       });
@@ -36,11 +34,15 @@ export default class Quotes extends Component {
 
   render() {
     return (
-      <div>
-        <Search searchInput={e => this.searchInput(e)} className="input" />
-        {this.state.quotes.map((quote, i) => {
-          return <Quote quote={quote} key={i} />;
-        })}
+      <div className="container">
+        <div className="container">
+          <Search searchInput={e => this.searchInput(e)} className="input" />
+        </div>
+        <div className="container">
+          {this.state.quotes.map((quote, i) => {
+            return <Quote quote={quote} key={i} />;
+          })}
+        </div>
       </div>
     );
   }
