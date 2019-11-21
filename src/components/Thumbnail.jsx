@@ -2,19 +2,25 @@ import React, { Component } from "react";
 import axios from "axios";
 axios
   .get(
-    "https://en.wikipedia.org/w/api.php?action=query&titles=Edsger%20W.%20 Dijkstra&format=json&prop=pageimages&pithumbsize=500"
+    "https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=query&titles=Edsger%20W.%20Dijkstra|Elon%20Musk&format=json&prop=pageimages&pithumbsize=500"
   )
+
   .then(result => console.log(result));
 export default class Thumbnail extends Component {
   constructor() {
     super();
     this.state = {
-      authors: {}
+      authors: {},
+      // authorString = ''
     };
   }
 
+
+
+
   componentDidMount() {
     let urlName = this.props.author.split(" ").join("%20");
+    console.log(urlName);
     // console.log(
     //   urlName,
     //   `https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=query&titles=${urlName}&prop=pageimagesformat=json`
@@ -35,6 +41,10 @@ export default class Thumbnail extends Component {
           this.setState({ authors: response.data.query });
         });
   }
+
+    // makeUrl = () => {
+    //   authorString
+    // }
   //.query.pages.'175040'
   render() {
     // {
