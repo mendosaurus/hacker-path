@@ -29,25 +29,30 @@ export default class NavBar extends Component {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link to={"/"} className="nav-link">
                 Home
                 <span className="sr-only">(current)</span>
               </Link>
-            </li>
+            </li> */}
             <li className="nav-item">
               <Link to={"/quotes"} className="nav-link">
-                Programmer's Quote
+                Search Quote
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link to={"/daily-quote"} className="nav-link">
                 Daily Quote
               </Link>
-            </li>
-            <li className="nav-item">
+            </li> */}
+            {/* <li className="nav-item">
               <Link to={"/make-study-group"} className="nav-link">
                 Make Study Group
+              </Link>
+            </li> */}
+            <li className="nav-item">
+              <Link to={"/saved-quotes"} className="nav-link">
+                Saved Quotes
               </Link>
             </li>
           </ul>
