@@ -46,7 +46,7 @@ export default class NavBar extends Component {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to={"/study-group"} className="nav-link">
+              <Link to={"/make-study-group"} className="nav-link">
                 Make Study Group
               </Link>
             </li>

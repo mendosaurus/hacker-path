@@ -7,6 +7,7 @@ import Quotes from "./components/Quotes";
 import News from "./components/News";
 import StudyGroup from "./components/StudyGroup";
 import RandomQuote from "./components/RandomQuote";
+import NewEvent from "./components/NewEvent";
 
 import { Switch, Route } from "react-router-dom";
 
@@ -19,7 +20,7 @@ function App() {
         <Route exact path="/quotes" component={Quotes} />
         <Route exact path="/daily-quotes" component={RandomQuote} />
         <Route exact path="/news" component={News} />
-        <Route exact path="/study-group" component={StudyGroup} />
+        <Route exact path="/make-study-group" component={NewEvent} />
       </Switch>
     </div>
   );
