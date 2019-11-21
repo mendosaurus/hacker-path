@@ -5,8 +5,7 @@ export default class Thumbnail extends Component {
   constructor() {
     super();
     this.state = {
-      authors: {},
-      imageUrl: ""
+      authors: {}
     };
   }
 
@@ -22,9 +21,8 @@ export default class Thumbnail extends Component {
         //   "https://en.wikipedia.org/w/api.php?action=query&titles=George%20Boole&prop=pageimages&format=json&pithumbsize=100"
         // )
         .get(
-          `https://en.wikipedia.org/w/api.php?action=query&titles=${urlName}&format=json&prop=pageimages`
+          `https://en.wikipedia.org/w/api.php?action=query&titles=${urlName}&format=json&prop=pageimages&pithumbsize=500`
         )
-        // https://www.mediawiki.org/w/api.php?action=query&prop=pageimages&titles=Albert%20Einstein&pithumbsize=100
         .then(response => {
           console.log(
             response.data.query.pages[Object.keys(response.data.query.pages)[0]]
@@ -50,12 +48,17 @@ export default class Thumbnail extends Component {
         this.state.authors.pages[Object.keys(this.state.authors.pages)[0]]
           .thumbnail.source
       );
+      const imgStyle = {
+        height: "200px"
+      };
       return (
         <img
+          className="img-circle"
           src={
             this.state.authors.pages[Object.keys(this.state.authors.pages)[0]]
               .thumbnail.source
           }
+          style={imgStyle}
           alt=""
         />
       );

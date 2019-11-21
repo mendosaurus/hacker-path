@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import axios from "axios";
+// import axios from "axios";
 import Home from "./components/Home";
 import NavBar from "./components/NavBar";
 import Quotes from "./components/Quotes";
