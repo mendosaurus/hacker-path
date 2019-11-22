@@ -8,6 +8,7 @@ import News from "./components/News";
 // import StudyGroup from "./components/StudyGroup";
 import RandomQuote from "./components/RandomQuote";
 import NewEvent from "./components/NewEvent";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import { Switch, Route } from "react-router-dom";
 
