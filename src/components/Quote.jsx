@@ -14,12 +14,11 @@ export default class Quote extends Component {
       rating: ""
     };
   }
-  
+
   handleSaveQuote = e => {
     console.log("save!");
     e.preventDefault();
     this.setState({
-      //need to setState first
       imageUrl: "",
       quote: "",
       author: "",
@@ -27,10 +26,8 @@ export default class Quote extends Component {
     });
     const quoteData = this.state;
     axios
-      // create a collection
-      .post("https://ironrest.herokuapp.com/createCollection/quotes")
-      // Insert new document in collection
-      .post("https://ironrest.herokuapp.com/quotes", quoteData)
+      // .post("https://ironrest.herokuapp.com/createCollection/quotes") // create a collection
+      .post("https://ironrest.herokuapp.com/quotes", quoteData) // Insert new document in collection
       .then(e => console.log(e));
   };
 
