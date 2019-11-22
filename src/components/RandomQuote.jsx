@@ -5,12 +5,12 @@ import Rating from "./Rating";
 
 export default class RandomQuote extends Component {
   render() {
-    console.log(this.props);
+    console.log(this.props.quote);
     return (
       <blockquote className="blockquote text-light">
         <div className="row">
           <div className="col-sm-12 text-center">
-            {/* <Thumbnail author={this.props.quote.author} /> */}
+            <Thumbnail author={this.props.quote.author} />
           </div>
           <div className="col-sm-12">
             <p className="">{this.props.quote.en}</p>

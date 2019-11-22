@@ -6,7 +6,7 @@ export default class NavBar extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand-lg">
-        <a className="navbar-brand font-orange" href="/">
+        <Link className="navbar-brand font-orange" to="/">
           <img
             src="../images/logo.png"
             width="30"
@@ -15,7 +15,7 @@ export default class NavBar extends Component {
             alt=""
           />
           <strong>5 SECONDS OF KNOWLEDGE</strong>
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"

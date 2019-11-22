@@ -10,25 +10,32 @@ export default class Thumbnail extends Component {
   constructor() {
     super();
     this.state = {
-      authors: {},
+      authors: {}
       // authorString = ''
     };
   }
 
   componentDidMount() {
-    let urlName = this.props.author.split(" ").join("%20");
     // console.log(urlName);
     // console.log(
     //   urlName,
     //   `https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=query&titles=${urlName}&prop=pageimagesformat=json`
     // );
-    if (this.props.author)
+    if (this.props.author) {
+      let urlName = this.props.author.split(" ").join("%20");
+      console.log(
+        `https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=query&titles=${this.props.author
+          .split(" ")
+          .join("%20")}&format=json&prop=pageimages&pithumbsize=500`
+      );
       axios
         // .get(
         //   "https://en.wikipedia.org/w/api.php?action=query&titles=George%20Boole&prop=pageimages&format=json&pithumbsize=100"
         // )
         .get(
-          `https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=query&titles=${urlName}&format=json&prop=pageimages&pithumbsize=500` //cors error
+          `https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=query&titles=${this.props.author
+            .split(" ")
+            .join("%20")}&format=json&prop=pageimages&pithumbsize=500` //cors error
         )
         .then(response => {
           // console.log(
@@ -37,15 +44,16 @@ export default class Thumbnail extends Component {
           // );
           this.setState({ authors: response.data.query });
         });
+    }
   }
 
-    // makeUrl = () => {
-    //   authorString
-    // }
+  // makeUrl = () => {
+  //   authorString
+  // }
   //.query.pages.'175040'
   render() {
     // {
-    //   console.log(this.state.authors);
+    console.log(this.props.authors, this.state);
     // }
     if (
       this.state.authors &&
