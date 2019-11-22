@@ -57,7 +57,7 @@ export default class NewEvent extends Component {
     const allInput = this.state;
     e.preventDefault();
     axios
-      .post("https://ih-beers-api2.herokuapp.com/beers/new", allInput)
+      .post("https://ironrest.herokuapp.com/createCollection/quotes-event", allInput)
       .then(e => console.log(e));
   };
   render() {
