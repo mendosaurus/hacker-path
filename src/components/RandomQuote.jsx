@@ -9,8 +9,14 @@ export default class RandomQuote extends Component {
     return (
       <blockquote className="blockquote text-light">
         <div className="row">
-          <div className="col-sm-12 text-center">
-            <Thumbnail author={this.props.quote.author} />
+          <div className="col-sm-12 text-center p-5">
+            <img
+              src={require("../images/icons8-quote-left-96.png")}
+              width="100"
+              height="90"
+              alt="cam"
+            />
+            {/* <Thumbnail author={this.props.quote.author} /> */}
           </div>
           <div className="col-sm-12">
             <p className="">{this.props.quote.en}</p>
