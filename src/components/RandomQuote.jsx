@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import axios from "axios";
-import Thumbnail from "./Thumbnail";
+// import axios from "axios";
+// import Thumbnail from "./Thumbnail";
 import Rating from "./Rating";
 
 export default class RandomQuote extends Component {
@@ -14,11 +14,11 @@ export default class RandomQuote extends Component {
               src={require("../images/icons8-quote-left-96.png")}
               width="100"
               height="90"
-              alt="cam"
+              alt="quote"
             />
             {/* <Thumbnail author={this.props.quote.author} /> */}
           </div>
-          <div className="col-sm-12">
+          <div className="col-sm-12 p-5">
             <p className="">{this.props.quote.en}</p>
             <footer className="blockquote-footer">
               {this.props.quote.author}

@@ -22,7 +22,7 @@ export default class Thumbnail extends Component {
     //   `https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=query&titles=${urlName}&prop=pageimagesformat=json`
     // );
     if (this.props.author) {
-      let urlName = this.props.author.split(" ").join("%20");
+      // let urlName = this.props.author.split(" ").join("%20");
       console.log(
         `https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=query&titles=${this.props.author
           .split(" ")

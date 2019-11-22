@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
 import { Navbar } from "react-bootstrap";
-import { Brand } from "react-bootstrap";
-import { Toggle } from "react-bootstrap";
+// import { Brand } from "react-bootstrap";
+// import { Toggle } from "react-bootstrap";
 import { Nav } from "react-bootstrap";
 // import { Link } from "react-bootstrap";
-import { Collapse } from "react-bootstrap";
+// import { Collapse } from "react-bootstrap";
 
 export default class NavBar extends Component {
   render() {

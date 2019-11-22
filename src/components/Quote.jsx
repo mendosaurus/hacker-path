@@ -33,7 +33,7 @@ export default class Quote extends Component {
 
   render() {
     return (
-      <blockquote className="blockquote text-light bg-dark">
+      <blockquote className="blockquote text-light bg-dark p-3">
         <div className="row">
           <div className="col-sm-3 text-center">
             <Thumbnail author={this.props.quote.author} />

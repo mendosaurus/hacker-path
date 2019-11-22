@@ -36,7 +36,7 @@ export default class Quotes extends Component {
   render() {
     return (
       <div className="container">
-        <div className="container">
+        <div className="container p-2">
           <Search searchInput={e => this.searchInput(e)} className="input" />
         </div>
         <div className="container">

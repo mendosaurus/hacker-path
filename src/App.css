@@ -29,6 +29,10 @@
   color: #fea04f;
 }
 
-html{
-  /* font-size: 10; */
+blockquote p {
+    font-size: 1.8rem !important;
+}
+
+.blockquote-footer{
+    font-size: 1.5rem !important;
 }
