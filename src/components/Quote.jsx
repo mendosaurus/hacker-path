@@ -39,7 +39,7 @@ export default class Quote extends Component {
             <Thumbnail author={this.props.quote.author} />
           </div>
           <div className="col-sm-9">
-            <p className="">{this.props.quote.en}</p>
+            <p className="p-3">{this.props.quote.en}</p>
             <footer className="blockquote-footer">
               {this.props.quote.author}
             </footer>

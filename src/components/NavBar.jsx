@@ -16,7 +16,7 @@ export default class NavBar extends Component {
           <strong className="font-orange">5 SECONDS OF KNOWLEDGE</strong>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav" >
+        <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             {/* <Nav.Link href="#quotes">Search Quotes</Nav.Link>
             <Nav.Link href="#saved-quotes">Saved Quotes</Nav.Link> */}
