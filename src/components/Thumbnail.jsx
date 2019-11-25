@@ -82,7 +82,19 @@ export default class Thumbnail extends Component {
         />
       );
     } else {
-      return "no pic";
+      const imgStyle = {
+        height: "200px"
+      };
+      // return "no pic";
+      return (
+        <img
+          // src="../images/112815953-no-image-available-icon-flat-vector.jpg"
+          src={require("../images/109135379-photo-not-available-vector-icon-isolated-on-transparent-background-photo-not-available-logo-concept.jpg")}
+          className="img-circle"
+          style={imgStyle}
+          alt=""
+        />
+      );
     }
   }
 }

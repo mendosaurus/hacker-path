@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Rating from "./Rating";
 import Thumbnail from "./Thumbnail";
-// import Button from "./Button";
+import Button from "./Button";
 import axios from "axios";
 
 export default class SavedQuote extends Component {
@@ -18,7 +18,7 @@ export default class SavedQuote extends Component {
               {this.props.quote.author}
             </footer>
             <Rating>{this.props.quote.rating}</Rating>
-            {/* <Button submit={e => this.handleSaveQuote(e)} info="Save" /> */}
+            <Button submit={e => this.handleSaveQuote(e)} info="Remove from" />
             {/* <span>voted by {this.props.quote.numberOfVotes} people</span> */}
           </div>
         </div>

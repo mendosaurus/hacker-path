@@ -29,6 +29,7 @@ export default class SavedQuotes extends Component {
           {this.state.savedQuotes.map((quote, i) => {
             return <SavedQuote quote={quote} key={i} />;
           })}
+          .reverse()
         </div>
       </div>
     );
