@@ -1,24 +1,25 @@
 {
   "files": {
-    "main.css": "/5secondsofknowledge/static/css/main.1596f7de.chunk.css",
-    "main.js": "/5secondsofknowledge/static/js/main.c0df7ab4.chunk.js",
-    "main.js.map": "/5secondsofknowledge/static/js/main.c0df7ab4.chunk.js.map",
+    "main.css": "/5secondsofknowledge/static/css/main.0e8c5857.chunk.css",
+    "main.js": "/5secondsofknowledge/static/js/main.1f4eb6aa.chunk.js",
+    "main.js.map": "/5secondsofknowledge/static/js/main.1f4eb6aa.chunk.js.map",
     "runtime-main.js": "/5secondsofknowledge/static/js/runtime-main.bbb1c221.js",
     "runtime-main.js.map": "/5secondsofknowledge/static/js/runtime-main.bbb1c221.js.map",
     "static/css/2.71746c6c.chunk.css": "/5secondsofknowledge/static/css/2.71746c6c.chunk.css",
-    "static/js/2.0d9ef9c7.chunk.js": "/5secondsofknowledge/static/js/2.0d9ef9c7.chunk.js",
-    "static/js/2.0d9ef9c7.chunk.js.map": "/5secondsofknowledge/static/js/2.0d9ef9c7.chunk.js.map",
+    "static/js/2.cd44cedb.chunk.js": "/5secondsofknowledge/static/js/2.cd44cedb.chunk.js",
+    "static/js/2.cd44cedb.chunk.js.map": "/5secondsofknowledge/static/js/2.cd44cedb.chunk.js.map",
     "index.html": "/5secondsofknowledge/index.html",
-    "precache-manifest.9e2a53a59145c810f5a3b0e106b34c0f.js": "/5secondsofknowledge/precache-manifest.9e2a53a59145c810f5a3b0e106b34c0f.js",
+    "precache-manifest.4f01af326a6a4e7a052c107c074ede1c.js": "/5secondsofknowledge/precache-manifest.4f01af326a6a4e7a052c107c074ede1c.js",
     "service-worker.js": "/5secondsofknowledge/service-worker.js",
     "static/css/2.71746c6c.chunk.css.map": "/5secondsofknowledge/static/css/2.71746c6c.chunk.css.map",
-    "static/css/main.1596f7de.chunk.css.map": "/5secondsofknowledge/static/css/main.1596f7de.chunk.css.map"
+    "static/css/main.0e8c5857.chunk.css.map": "/5secondsofknowledge/static/css/main.0e8c5857.chunk.css.map",
+    "static/media/109135379-photo-not-available-vector-icon-isolated-on-transparent-background-photo-not-available-logo-concept.jpg": "/5secondsofknowledge/static/media/109135379-photo-not-available-vector-icon-isolated-on-transparent-background-photo-not-available-logo-concept.bfd98721.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.bbb1c221.js",
     "static/css/2.71746c6c.chunk.css",
-    "static/js/2.0d9ef9c7.chunk.js",
-    "static/css/main.1596f7de.chunk.css",
-    "static/js/main.c0df7ab4.chunk.js"
+    "static/js/2.cd44cedb.chunk.js",
+    "static/css/main.0e8c5857.chunk.css",
+    "static/js/main.1f4eb6aa.chunk.js"
   ]
 }
