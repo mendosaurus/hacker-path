@@ -10,7 +10,7 @@ export default class SavedQuote extends Component {
     e.preventDefault();
     axios
       .delete(`https://ironrest.herokuapp.com/quotes/${this.props.quote._id}`) // delete document in collection
-      .then(this.props.delete());
+      .then(this.props.delete()); // call function in props
   };
 
   render() {

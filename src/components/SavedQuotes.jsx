@@ -23,11 +23,12 @@ export default class SavedQuotes extends Component {
 
   deleteQuote = e => {
     let savedQuotesCopy = this.state.savedQuotes.filter(
-      // filter array in this.state
+      // filter array in this.state,
       quote => quote._id !== e
     );
     console.log(e);
     console.log(savedQuotesCopy);
+    // then set state
     this.setState({
       savedQuotes: savedQuotesCopy
     });

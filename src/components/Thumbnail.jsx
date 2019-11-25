@@ -1,11 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-// axios
-//   .get(
-//     "https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=query&titles=Edsger%20W.%20Dijkstra|Elon%20Musk&format=json&prop=pageimages&pithumbsize=500"
-//   )
 
-//   .then(result => console.log(result));
 export default class Thumbnail extends Component {
   constructor() {
     super();
@@ -29,19 +24,17 @@ export default class Thumbnail extends Component {
       //     .join("%20")}&format=json&prop=pageimages&pithumbsize=500`
       // );
       axios
-        // .get(
-        //   "https://en.wikipedia.org/w/api.php?action=query&titles=George%20Boole&prop=pageimages&format=json&pithumbsize=100"
-        // )
         .get(
           `https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=query&titles=${this.props.author
             .split(" ")
-            .join("%20")}&format=json&prop=pageimages&pithumbsize=500` //cors error
+            .join("%20")}
+          &format=json&prop=pageimages&pithumbsize=500` //cors error
         )
         .then(response => {
-          // console.log(
-          //   response.data.query.pages[Object.keys(response.data.query.pages)[0]]
-          //   // response.data.query.pages
-          // );
+          console.log(
+            response.data.query.pages[Object.keys(response.data.query.pages)[0]]
+            // response.data.query.pages
+          );
           this.setState({ authors: response.data.query });
         });
     }
