@@ -53,7 +53,7 @@ export default class Thumbnail extends Component {
   //.query.pages.'175040'
   render() {
     // {
-    console.log(this.props.authors, this.state);
+    // console.log(this.props.authors, this.state);
     // }
     if (
       this.state.authors &&

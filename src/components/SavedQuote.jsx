@@ -5,6 +5,14 @@ import Button from "./Button";
 import axios from "axios";
 
 export default class SavedQuote extends Component {
+  handleRemoveQuote = e => {
+    console.log("remove!");
+    e.preventDefault();
+    axios
+      .delete(`https://ironrest.herokuapp.com/quotes/${this.props.quote._id}`) // delete document in collection
+      .then(this.props.delete());
+  };
+
   render() {
     return (
       <blockquote className="blockquote text-light bg-dark p-3">
@@ -18,7 +26,7 @@ export default class SavedQuote extends Component {
               {this.props.quote.author}
             </footer>
             <Rating>{this.props.quote.rating}</Rating>
-            <Button submit={e => this.handleSaveQuote(e)} info="Remove from" />
+            <Button submit={e => this.handleRemoveQuote(e)} info="Remove" />
             {/* <span>voted by {this.props.quote.numberOfVotes} people</span> */}
           </div>
         </div>

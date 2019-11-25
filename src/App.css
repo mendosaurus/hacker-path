@@ -42,6 +42,10 @@ blockquote p {
   font-size: 1.3em !important;
 }
 
-.nav-link:hover{
+.nav-link:hover {
   border-bottom: #fea04f 1px solid;
+}
+
+.btn {
+  font-size: 1.3em !important;
 }
