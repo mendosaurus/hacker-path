@@ -19,10 +19,10 @@ export default class Quote extends Component {
     console.log("save!");
     e.preventDefault();
     this.setState({
-      imageUrl: "",
-      quote: "",
-      author: "",
-      rating: ""
+      imageUrl: `${this.props.quote.author}`,
+      quote: `${this.props.quote.en}`,
+      author: `${this.props.quote.author}`,
+      rating: `${this.props.quote.rating}`
     });
     const quoteData = this.state;
     axios
