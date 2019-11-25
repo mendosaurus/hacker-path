@@ -27,6 +27,7 @@
 
 .font-orange {
   color: #fea04f;
+  font-size: larger;
 }
 
 blockquote p {
@@ -35,4 +36,8 @@ blockquote p {
 
 .blockquote-footer {
   font-size: 1.8rem !important;
+}
+
+.nav-link {
+  font-size: 1.3em !important;
 }

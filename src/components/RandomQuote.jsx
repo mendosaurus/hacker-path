@@ -19,7 +19,7 @@ export default class RandomQuote extends Component {
             {/* <Thumbnail author={this.props.quote.author} /> */}
           </div>
           <div className="col-sm-12 p-2">
-            <p className="p-5">{this.props.quote.en}</p>
+            <p className="p-3">{this.props.quote.en}</p>
             <footer className="blockquote-footer">
               {this.props.quote.author}
             </footer>
