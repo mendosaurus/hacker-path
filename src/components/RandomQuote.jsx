@@ -4,18 +4,25 @@ import React, { Component } from "react";
 import Rating from "./Rating";
 
 export default class RandomQuote extends Component {
+  refreshPage = () => {
+    window.location.reload(false);
+  };
+
   render() {
     console.log(this.props.quote);
     return (
       <blockquote className="blockquote text-light">
         <div className="row">
           <div className="col-sm-12 text-center p-5">
-            <img
+            {/* <img
               src={require("../images/icons8-quote-left-96.png")}
               width="100"
               height="90"
               alt="quote"
-            />
+            /> */}
+            <button value="Refresh Page" onClick={this.refreshPage}>
+              Gimme More
+            </button>
             {/* <Thumbnail author={this.props.quote.author} /> */}
           </div>
           <div className="col-sm-12 p-2">
