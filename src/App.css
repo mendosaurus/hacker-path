@@ -90,6 +90,8 @@ button:after {
     #c850c0 46%,
     #ffcc70 100%
   );
+  background-color: #FA8BFF;
+background-image: linear-gradient(45deg, #FA8BFF 30%, #2BD2FF 52%, #2BFF88 90%);
 
   /* background: linear-gradient(
     60deg,

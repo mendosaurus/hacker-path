@@ -7,7 +7,8 @@ export default class Quotes extends Component {
   constructor() {
     super();
     this.state = {
-      quotes: []
+      quotes: [],
+      images: []
     };
   }
 
@@ -15,10 +16,42 @@ export default class Quotes extends Component {
     axios
       .get("https://programming-quotes-api.herokuapp.com/quotes")
       .then(response => {
-        this.setState({ quotes: response.data });
+        let uniques = Object.values(
+          response.data.reduce(
+            (acc, cur) => Object.assign(acc, { [cur.author]: cur }),
+            {}
+          )
+        );
+
+        this.setState({ quotes: uniques });
         console.log(response.data);
+        this.buildUrl(uniques);
       });
   }
+  //https://en.wikipedia.org/w/api.php?action=query&titles=Edsger%20W.%20Dijkstra|Tony%20Hoare&format=json&prop=pageimages&pithumbsize=500
+  buildUrl = data => {
+    let url = "";
+    for (let i = 0; i < 50; i++) {
+      url += data[i].author + "|";
+    }
+
+    let finalUrl = `https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=query&titles=${url.slice(
+      0,
+      -1
+    )}&format=json&prop=pageimages&pithumbsize=500`;
+    console.log(finalUrl);
+    axios
+      .get(finalUrl)
+      .then(res => {
+        console.log(res.data);
+        let images = [];
+        for (let j in res.data.query.pages) {
+          images.push(res.data.query.pages[j]);
+        }
+        this.setState({ images });
+      })
+      .catch(err => console.log(err));
+  };
 
   searchInput = e => {
     console.log(e.target.value);
@@ -41,7 +74,13 @@ export default class Quotes extends Component {
         </div>
         <div className="container">
           {this.state.quotes.map((quote, i) => {
-            return <Quote quote={quote} key={i} />;
+            console.log(this.state.images[i]);
+
+            {
+              return (
+                <Quote quote={quote} key={i} image={this.state.images[i]} />
+              );
+            }
           })}
         </div>
       </div>
