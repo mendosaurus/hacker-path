@@ -7,7 +7,7 @@ import { Nav } from "react-bootstrap";
 export default class NavBar extends Component {
   render() {
     return (
-      <Navbar expand="lg" className="background-dark">
+      <Navbar expand="lg" className="background-dark fixed-top">
         <Navbar.Brand href="/">
           <strong className="font-orange">5 SECONDS OF KNOWLEDGE</strong>
         </Navbar.Brand>
