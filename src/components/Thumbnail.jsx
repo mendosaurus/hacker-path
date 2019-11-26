@@ -6,7 +6,9 @@ export default class Thumbnail extends Component {
     super();
     this.state = {
       authors: {},
-      imageUrl: {}
+      imageUrl: {
+        name: "url"
+      }
     };
   }
 
@@ -34,14 +36,13 @@ export default class Thumbnail extends Component {
               .thumbnail
           ) {
             // wanted to add new properties, but it overwrites previous property
-            this.state.imageUrl[`${this.props.author}`] = `${
-              this.state.authors.pages[Object.keys(this.state.authors.pages)[0]]
-                .thumbnail.source
-            }`;
-            console.log(this.state.imageUrl);
+            this.state.imageUrl[this.props.author] = this.state.authors.pages[
+              Object.keys(this.state.authors.pages)[0]
+            ].thumbnail.source;
           }
         });
     }
+    console.log(this.state);
   }
 
   render() {
