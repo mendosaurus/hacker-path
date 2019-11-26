@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9b5dfdf6b24741e196e8472d2dbb1ca9",
+    "revision": "a48aefdecf3c3098fb4356005c67a51e",
     "url": "/5secondsofknowledge/index.html"
   },
   {
-    "revision": "8711e72b0b6df2fcd0c1",
+    "revision": "a516467f75d8dacf17a6",
     "url": "/5secondsofknowledge/static/css/2.71746c6c.chunk.css"
   },
   {
-    "revision": "2ff222079cdc1bac7525",
-    "url": "/5secondsofknowledge/static/css/main.0e8c5857.chunk.css"
+    "revision": "fab6acd7a44178d2bcd5",
+    "url": "/5secondsofknowledge/static/css/main.19cbd1f5.chunk.css"
   },
   {
-    "revision": "8711e72b0b6df2fcd0c1",
-    "url": "/5secondsofknowledge/static/js/2.cd44cedb.chunk.js"
+    "revision": "a516467f75d8dacf17a6",
+    "url": "/5secondsofknowledge/static/js/2.4b7caf46.chunk.js"
   },
   {
-    "revision": "2ff222079cdc1bac7525",
-    "url": "/5secondsofknowledge/static/js/main.1f4eb6aa.chunk.js"
+    "revision": "fab6acd7a44178d2bcd5",
+    "url": "/5secondsofknowledge/static/js/main.4fa4da67.chunk.js"
   },
   {
     "revision": "b5112a44f2ef563c3b87",
