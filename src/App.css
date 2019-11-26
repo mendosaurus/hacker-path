@@ -27,7 +27,7 @@
 
 .font-orange {
   color: #fea04f;
-  font-size: larger;
+  font-size: 1.3rem;
 }
 
 blockquote p {
@@ -43,7 +43,7 @@ blockquote p {
 }
 
 .nav-link:hover {
-  border-bottom: #fea04f 1px solid;
+  border-bottom: #fea04f 2px solid;
 }
 
 .btn {
@@ -51,43 +51,96 @@ blockquote p {
 }
 
 button {
-	 border: none;
-	 padding: 1em;
-	 outline: none;
-	 color: white;
-	 text-transform: uppercase;
-	 font-weight: 900;
-	 font-style: 1.2em;
-	 letter-spacing: 0.2em;
-	 position: relative;
-	 z-index: 1;
-	 cursor: pointer;
-	 background: none;
-	 text-shadow: 3px 3px 10px rgba(0, 0, 0, .45);
+  border: none;
+  padding: 1em;
+  outline: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 2.3rem;
+  letter-spacing: 0.2rem;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  background: none;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.45);
 }
- button:before, button:after {
-	 position: absolute;
-	 top: 50%;
-	 left: 50%;
-	 border-radius: 10em;
-	 transform: translateX(-50%) translateY(-50%);
-	 width: 105%;
-	 height: 105%;
-	 content: '';
-	 z-index: -2;
-	 background-size: 400% 400%;
-	 background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+button:before,
+button:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 10em;
+  transform: translateX(-50%) translateY(-50%);
+  width: 105%;
+  height: 105%;
+  content: "";
+  z-index: -2;
+  background-size: 400% 400%;
+  background: linear-gradient(
+    60deg,
+    #f79533,
+    #f37055,
+    #ef4e7b,
+    #a166ab,
+    #5073b8,
+    #1098ad,
+    #07b39b,
+    #6fba82
+  );
 }
- button:before {
-	 filter: blur(7px);
-	 transition: all 0.25s ease;
-	 animation: pulse 10s infinite ease;
+button:before {
+  filter: blur(7px);
+  transition: all 0.25s ease;
+  animation: pulse 10s infinite ease;
 }
- button:after {
-	 filter: blur(0.3px);
+button:after {
+  filter: blur(0.3px);
 }
- button:hover:before {
-	 width: 115%;
-	 height: 115%;
+button:hover:before {
+  width: 115%;
+  height: 115%;
 }
- 
+
+@media screen and (max-width: 812px) {
+  blockquote p {
+    font-size: 1.5rem !important;
+  }
+  .font-orange {
+    font-size: 1.2rem;
+  }
+  .blockquote-footer {
+    font-size: 1.2rem !important;
+  }
+}
+
+/* iPhoneX */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  blockquote p {
+    font-size: 1.5rem !important;
+  }
+  .font-orange {
+    font-size: 1.2rem;
+  }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+  blockquote p {
+    font-size: 1.5rem !important;
+  }
+  .font-orange {
+    font-size: 1.2rem;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  blockquote p {
+    font-size: 1.5rem !important;
+  }
+  .font-orange {
+    font-size: 1.2rem;
+  }
+}
