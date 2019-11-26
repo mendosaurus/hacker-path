@@ -16,16 +16,16 @@ export default class Quotes extends Component {
     axios
       .get("https://programming-quotes-api.herokuapp.com/quotes")
       .then(response => {
-        let uniques = Object.values(
+        let uniqueAuthors = Object.values(
           response.data.reduce(
             (acc, cur) => Object.assign(acc, { [cur.author]: cur }),
             {}
           )
         );
 
-        this.setState({ quotes: uniques });
+        this.setState({ quotes: uniqueAuthors });
         console.log(response.data);
-        this.buildUrl(uniques);
+        this.buildUrl(uniqueAuthors);
       });
   }
   //https://en.wikipedia.org/w/api.php?action=query&titles=Edsger%20W.%20Dijkstra|Tony%20Hoare&format=json&prop=pageimages&pithumbsize=500
@@ -100,5 +100,5 @@ export default class Quotes extends Component {
         )
         .then(response => console.log(response));
     });
-  }
+  };
 }
