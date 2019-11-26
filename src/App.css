@@ -77,7 +77,21 @@ button:after {
   content: "";
   z-index: -2;
   background-size: 400% 400%;
-  background: linear-gradient(
+  /* background-image: linear-gradient(
+    45deg,
+    #fa8bff 20%,
+    #2bd2ff 52%,
+    #2bff88 90%
+  ); */
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 20%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+
+  /* background: linear-gradient(
     60deg,
     #fea04f,
     #f37055,
@@ -87,7 +101,7 @@ button:after {
     #1098ad,
     #07b39b,
     #6fba82
-  );
+  ); */
 }
 button:before {
   filter: blur(7px);

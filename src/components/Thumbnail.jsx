@@ -5,10 +5,8 @@ export default class Thumbnail extends Component {
   constructor() {
     super();
     this.state = {
-      authors: {},
-      imageUrl: {
-        name: "url"
-      }
+      authors: [],
+      imageUrl: {}
     };
   }
 
@@ -26,6 +24,7 @@ export default class Thumbnail extends Component {
           //   // response.data.query.pages[Object.keys(response.data.query.pages)[0]]
           //   response.data.query
           // );
+          console.log(this.state.imageUrl);
           this.setState({ authors: response.data.query });
           console.log(this.props.author, response.data.query);
           if (
@@ -35,14 +34,19 @@ export default class Thumbnail extends Component {
             this.state.authors.pages[Object.keys(this.state.authors.pages)[0]]
               .thumbnail
           ) {
-            // wanted to add new properties, but it overwrites previous property
-            this.state.imageUrl[this.props.author] = this.state.authors.pages[
-              Object.keys(this.state.authors.pages)[0]
-            ].thumbnail.source;
+            // wanted to add new properties in imageUrl, but it overwrites previous property
+            console.log(this.props.author);
+            this.setState({
+              [this.state.imageUrl[this.props.author]]: `${
+                this.state.authors.pages[
+                  Object.keys(this.state.authors.pages)[0]
+                ].thumbnail.source
+              }`
+            });
+            console.log(this.state.imageUrl);
           }
         });
     }
-    console.log(this.state);
   }
 
   render() {
