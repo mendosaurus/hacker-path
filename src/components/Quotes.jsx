@@ -56,8 +56,10 @@ export default class Quotes extends Component {
   searchInput = e => {
     console.log(e.target.value);
     let search = e.target.value;
-    let filteredQuotes = this.state.quotes.filter(quote => {
+    let img = [];
+    let filteredQuotes = this.state.quotes.filter((quote, i) => {
       if (quote.author.toLowerCase().includes(search.toLowerCase())) {
+        img.push(this.state.images[i]);
         return quote;
       }
     });
@@ -85,5 +87,18 @@ export default class Quotes extends Component {
         </div>
       </div>
     );
+  }
+  getImages = () => {
+    console.log("get image");
+    this.state.images.map(author => {
+      axios
+        .get(
+          `https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=query&titles=${author.title
+            .split(" ")
+            .join("%20")}
+            &format=json&prop=pageimages&pithumbsize=500` //cors error
+        )
+        .then(response => console.log(response));
+    });
   }
 }

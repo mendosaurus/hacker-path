@@ -2,7 +2,7 @@
   "name": "hacker-path",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mendosaurus.github.io/5secondsofknowledge/",
+  "homepage": "https://mendosaurus.github.io/hacker-path/",
   "dependencies": {
     "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
