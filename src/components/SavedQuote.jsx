@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Rating from "./Rating";
-import Thumbnail2 from "./Thumbnail2";
+import Thumbnail from "./Thumbnail";
 import Button from "./Button";
 import axios from "axios";
 
@@ -18,7 +18,7 @@ export default class SavedQuote extends Component {
       <blockquote className="blockquote text-light bg-dark p-3">
         <div className="row">
           <div className="col-sm-3 text-center">
-            <Thumbnail2
+            <Thumbnail
               author={this.props.quote.author}
               image={this.props.image}
             />
