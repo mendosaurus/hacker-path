@@ -73,7 +73,7 @@ export default class Thumbnail extends Component {
       };
       return (
         <img
-          className="img-circle"
+          className="img-thumbnail"
           src={
             this.state.authors.pages[Object.keys(this.state.authors.pages)[0]]
               .thumbnail.source
@@ -91,7 +91,7 @@ export default class Thumbnail extends Component {
         <img
           // src="../images/112815953-no-image-available-icon-flat-vector.jpg"
           src={require("../images/109135379-photo-not-available-vector-icon-isolated-on-transparent-background-photo-not-available-logo-concept.jpg")}
-          className="img-circle"
+          className="img-thumbnail"
           style={imgStyle}
           alt=""
         />
