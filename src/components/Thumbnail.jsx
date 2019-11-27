@@ -22,10 +22,6 @@ export default class Thumbnail extends Component {
           &format=json&prop=pageimages&pithumbsize=500` //cors error
         )
         .then(response => {
-          // console.log(
-          //   // response.data.query.pages[Object.keys(response.data.query.pages)[0]]
-          //   response.data.query
-          // );
           console.log(this.state.imageUrl);
           this.setState({ authors: response.data.query });
           console.log(this.props.author, response.data.query);
@@ -52,9 +48,6 @@ export default class Thumbnail extends Component {
   }
 
   render() {
-    // {
-    // console.log(this.props.authors, this.state);
-    // }
     if (
       this.state.authors &&
       this.state.authors.pages &&
@@ -62,10 +55,6 @@ export default class Thumbnail extends Component {
       this.state.authors.pages[Object.keys(this.state.authors.pages)[0]]
         .thumbnail
     ) {
-      // console.log(
-      //   this.state.authors.pages[Object.keys(this.state.authors.pages)[0]]
-      //     .thumbnail.source
-      // );
       const imgStyle = {
         height: "200px"
       };
@@ -84,10 +73,8 @@ export default class Thumbnail extends Component {
       const imgStyle = {
         height: "200px"
       };
-      // return "no pic";
       return (
         <img
-          // src="../images/112815953-no-image-available-icon-flat-vector.jpg"
           src={require("../images/109135379-photo-not-available-vector-icon-isolated-on-transparent-background-photo-not-available-logo-concept.jpg")}
           className="img-thumbnail"
           style={imgStyle}
