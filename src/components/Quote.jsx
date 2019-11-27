@@ -34,7 +34,7 @@ export default class Quote extends Component {
   render() {
     console.log(this);
     return (
-      <blockquote className="blockquote text-light bg-dark p-3">
+      <blockquote className="blockquote text-light bg-dark p-3 rounded">
         <div className="row">
           <div className="col-sm-3 text-center">
             <Thumbnail

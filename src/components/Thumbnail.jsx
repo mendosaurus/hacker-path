@@ -12,8 +12,6 @@ export default class Thumbnail extends Component {
     };
   }
 
-  //|
-
   componentDidMount() {
     if (this.props.author) {
       axios
