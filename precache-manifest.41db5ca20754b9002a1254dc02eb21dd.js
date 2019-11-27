@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2bc3e4c2f43e56a3bb30bc370493027e",
+    "revision": "c359a1402f12b4d1b99b7bd4f4626806",
     "url": "/hacker-path/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hacker-path/static/css/2.71746c6c.chunk.css"
   },
   {
-    "revision": "596bd7aff781ce0bbd2b",
+    "revision": "33f347ab363b9698304d",
     "url": "/hacker-path/static/css/main.07032c2d.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hacker-path/static/js/2.4b7caf46.chunk.js"
   },
   {
-    "revision": "596bd7aff781ce0bbd2b",
-    "url": "/hacker-path/static/js/main.95841534.chunk.js"
+    "revision": "33f347ab363b9698304d",
+    "url": "/hacker-path/static/js/main.cb296d70.chunk.js"
   },
   {
     "revision": "45d5b9e8162104789284",
