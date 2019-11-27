@@ -28,7 +28,6 @@ export default class Quotes extends Component {
         this.buildUrl(uniqueAuthors);
       });
   }
-  //https://en.wikipedia.org/w/api.php?action=query&titles=Edsger%20W.%20Dijkstra|Tony%20Hoare&format=json&prop=pageimages&pithumbsize=500
   buildUrl = data => {
     let url = "";
     for (let i = 0; i < 50; i++) {
