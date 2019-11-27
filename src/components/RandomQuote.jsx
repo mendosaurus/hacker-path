@@ -31,7 +31,6 @@ export default class RandomQuote extends Component {
             <button value="Refresh Page" onClick={this.refreshPage}>
               Gimme More
             </button>
-            {/* <Thumbnail author={this.props.quote.author} /> */}
           </div>
           <div className="col-sm-12 p-2">
             <p className="p-3">{this.props.quote.en}</p>
@@ -40,7 +39,6 @@ export default class RandomQuote extends Component {
             </footer>
             <Rating>{this.props.quote.rating}</Rating>
             <Button submit={e => this.handleSaveQuote(e)} info="Save" />
-            {/* <span>voted by {this.state.quote.numberOfVotes} people</span> */}
           </div>
         </div>
       </blockquote>
