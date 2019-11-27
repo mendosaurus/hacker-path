@@ -10,17 +10,23 @@ export default class RandomQuote extends Component {
   handleSaveQuote = e => {
     console.log("save!");
     e.preventDefault();
-    this.setState({
-      imageUrl: `${this.props.quote.author}`,
-      quote: `${this.props.quote.en}`,
-      author: `${this.props.quote.author}`,
-      rating: `${this.props.quote.rating}`
-    });
-    const quoteData = this.state;
-    axios
-      // .post("https://ironrest.herokuapp.com/createCollection/quotes") // create a collection
-      .post("https://ironrest.herokuapp.com/quotes", quoteData) // Insert new document in collection
-      .then(e => console.log(e));
+    this.setState(
+      {
+        imageUrl: `${this.props.quote.author}`,
+        quote: `${this.props.quote.en}`,
+        author: `${this.props.quote.author}`,
+        rating: `${this.props.quote.rating}`
+      },
+      // set anonymous function to save on the first click
+      () => {
+        const quoteData = this.state;
+        console.log(quoteData); // console.log when you get stuck
+        axios
+          // .post("https://ironrest.herokuapp.com/createCollection/quotes") // create a collection
+          .post("https://ironrest.herokuapp.com/quotes", quoteData) // Insert new document in collection
+          .then(e => console.log(e));
+      }
+    );
   };
   render() {
     console.log(this.props.quote);
