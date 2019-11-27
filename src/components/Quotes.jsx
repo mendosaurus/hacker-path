@@ -8,6 +8,7 @@ export default class Quotes extends Component {
     super();
     this.state = {
       quotes: [],
+      filteredQuotes: [],
       images: []
     };
   }
@@ -22,9 +23,8 @@ export default class Quotes extends Component {
             {}
           )
         );
-
-        this.setState({ quotes: uniqueAuthors });
-        console.log(response.data);
+        this.setState({ quotes: uniqueAuthors, filteredQuotes: uniqueAuthors });
+        // console.log(response.data);
         this.buildUrl(uniqueAuthors);
       });
   }
@@ -38,11 +38,11 @@ export default class Quotes extends Component {
       0,
       -1
     )}&format=json&prop=pageimages&pithumbsize=500`;
-    console.log(finalUrl);
+    // console.log(finalUrl);
     axios
       .get(finalUrl)
       .then(res => {
-        console.log(res.data);
+        // console.log(res.data);
         let images = [];
         for (let j in res.data.query.pages) {
           images.push(res.data.query.pages[j]);
@@ -53,7 +53,7 @@ export default class Quotes extends Component {
   };
 
   searchInput = e => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     let search = e.target.value;
     let img = [];
     let filteredQuotes = this.state.quotes.filter((quote, i) => {
@@ -63,7 +63,7 @@ export default class Quotes extends Component {
       }
     });
     this.setState({
-      quotes: filteredQuotes
+      filteredQuotes: filteredQuotes
     });
   };
 
@@ -74,13 +74,12 @@ export default class Quotes extends Component {
           <Search searchInput={e => this.searchInput(e)} className="input" />
         </div>
         <div className="container">
-          {this.state.quotes.map((quote, i) => {
-            console.log(this.state.images[i]);
-
+          {this.state.filteredQuotes.map((quote, i) => {
             {
-              return (
-                <Quote quote={quote} key={i} image={this.state.images[i]} />
-              );
+              /* console.log(this.state.images[i]); */
+            }
+            {
+              return <Quote quote={quote} key={i} />;
             }
           })}
         </div>
@@ -88,7 +87,7 @@ export default class Quotes extends Component {
     );
   }
   getImages = () => {
-    console.log("get image");
+    // console.log("get image");
     this.state.images.map(author => {
       axios
         .get(

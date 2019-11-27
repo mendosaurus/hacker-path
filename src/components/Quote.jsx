@@ -16,7 +16,7 @@ export default class Quote extends Component {
   }
 
   handleSaveQuote = e => {
-    console.log("save!");
+    // console.log("save!");
     e.preventDefault();
     this.setState(
       {
@@ -37,15 +37,12 @@ export default class Quote extends Component {
   };
 
   render() {
-    console.log(this);
+    // console.log(this.props.quote.author);
     return (
       <blockquote className="blockquote text-light bg-dark p-3 rounded">
         <div className="row">
           <div className="col-sm-3 text-center">
-            <Thumbnail
-              author={this.props.quote.author}
-              image={this.props.image}
-            />
+            <Thumbnail author={this.props.quote.author} />
           </div>
           <div className="col-sm-9">
             <p className="p-3">{this.props.quote.en}</p>
