@@ -53,7 +53,7 @@ export default class NavBar extends Component {
                 className="nav-link text-light"
                 onClick={this.closeNavbar}
               >
-                Search Quotes
+                <span>Search Quotes</span>
               </Link>
             </NavItem>
             <NavItem>
@@ -62,7 +62,7 @@ export default class NavBar extends Component {
                 className="nav-link text-light"
                 onClick={this.closeNavbar}
               >
-                Saved Quotes
+                <span>Saved Quotes</span>
               </Link>
             </NavItem>
           </Nav>

@@ -6,28 +6,23 @@
   background-color: #21212a;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
-}
-
 .font-orange {
   color: #fea04f;
+  font-size: 1.5rem;
+}
+
+nav {
   font-size: 1.3rem;
+}
+.navbar-collapse{
+  box-sizing: border-box;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 2rem !important;
+    padding-left: 2rem !important;
+  }
 }
 
 blockquote p {
@@ -40,6 +35,8 @@ blockquote p {
 
 .nav-link {
   font-size: 1.3em !important;
+  transition-property: all;
+  transition: 0.2s ease-in;
 }
 
 .nav-link:hover {
@@ -77,12 +74,6 @@ button:after {
   content: "";
   z-index: -2;
   background-size: 400% 400%;
-  /* background-image: linear-gradient(
-    45deg,
-    #fa8bff 20%,
-    #2bd2ff 52%,
-    #2bff88 90%
-  ); */
   background-color: #fa8bff;
   background-image: linear-gradient(
     45deg,
